@@ -1,0 +1,254 @@
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) { @content; }
+}
+
+
+.navcontainer {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: large;
+    z-index: 999;
+    background-color: white;
+    position: sticky !important;
+    top: 0;
+    // border-bottom: 1px solid black;
+    box-shadow: 0px 5px 7px -3px rgba(138,134,138,1);
+    @include tablet {
+
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        
+    }
+    .deercontainer {
+        padding-left: 10px;
+        display: none;
+        width: 10%;
+        @include tablet {
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .deer {
+            background-image: url(../img/nav/polartablet2.jpg);
+            background-position: center;
+            background-size: cover;
+            display: none;
+            height: 50px;
+            width: 40px;
+            @include tablet {
+                display: inline-block;
+            
+        }
+    }
+    }
+    .tabletnavcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 0;
+        @include tablet {
+            width: 75%;
+            display: inline-block;
+            text-align: center;
+        }
+        .listcontainer {
+                @include tablet {
+                    display: flex;
+                    justify-content: space-around;
+                }
+        }
+
+        li {
+            list-style: none;
+        .listbuttons {
+            background-color: white;
+                border: none;
+                margin-top: 20px;
+                display: none;
+                @include tablet {
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .basketcontainer {
+        cursor: pointer;
+        @include tablet {
+            width: 10%;
+            display: inline-block;
+        }
+        i {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 1.8em;
+        }
+        .badge {
+            position: absolute;
+            right: 12px;
+            top: 15px;
+        }
+
+    }
+    position: relative;
+    .js-toggleMenu {
+    background-image: url(../img/nav/polar.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+    left: 10px;
+    top: 0;
+    z-index: 9; 
+    height: 50px; 
+    width: 40px; 
+    border: none;
+    background-color: white;
+
+    @include tablet {
+        display: none;
+    }
+    }
+    .js-menu {
+        display: none;
+        width: 100%;
+        background-color: white;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        button {
+            border: none;
+            background-color: white;
+        }
+        @include tablet {
+            display: none !important;
+        }
+
+        .js-toggleDrink {
+            margin-top: 10px;
+            font-weight: bold;
+            position: relative;
+            border: none;
+            background-color: white;
+           
+
+            
+        }
+        .js-drinkMenu {
+            .mobilebtn {
+                border: none;
+                background-color: white;
+            }
+            width: 50%;
+            display: none;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .js-toggleSnow {
+            font-weight: bold;
+            border: none;
+            background-color: white;
+        }
+        .js-snowMenu {
+            .mobilebtn {
+                border: none;
+                background-color: white;
+            }
+            width: 50%;
+            display: none;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .js-toggleTobacco {
+            font-weight: bold;
+            border: none;
+            background-color: white;
+        }
+        .js-tobaccoMenu {
+            .mobilebtn {
+                border: none;
+                background-color: white;
+            }
+            width: 50%;
+            display: none;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .js-toggleGuns {
+            font-weight: bold;
+            border: none;
+            background-color: white;
+        }
+        .js-gunsMenu {
+            .mobilebtn {
+                border: none;
+                background-color: white;
+            }
+            width: 50%;
+            display: none;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }  
+    }
+
+}
+.tabletdropdowncontainer {
+    font-family: monospace;
+    display: none;
+    @include tablet {
+        border-radius: 5px;
+        padding: 20px;
+        z-index: 8;
+        background-color: white;
+        position: sticky !important;
+        top: 70px;
+        margin: 10px auto;
+        width: 100%;
+        box-shadow: 0px 5px 7px -3px rgba(138,134,138,1);
+    }
+    .tabletdropdown {
+        display: none;
+        @include tablet {
+            margin-left: 65px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        }
+        .tabletprodutcs {
+            a {
+                button {
+                    border: none;
+                    background-color: white;
+                }
+            }
+            width: 24%;
+            display: flex;
+            flex-direction: column;
+            .tabletdropbutton {
+                background-color: white;
+                border: none;
+                width: 100%;
+                text-align: start;
+            }
+        }
+    }
+}
